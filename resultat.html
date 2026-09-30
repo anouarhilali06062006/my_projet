@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bienvenue</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="result-page">
+
+    <div class="result-container">
+
+        <div class="welcome">
+
+            <span class="badge">✦ BIENVENUE</span>
+
+            <h1>
+                Bonjour <span id="nom"></span> 👋
+            </h1>
+
+            <p>
+                Votre inscription a été effectuée avec succès.
+                Voici les informations que vous avez renseignées.
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <div class="info">
+                <span>👤</span>
+                <div>
+                    <small>Prénom</small>
+                    <h3 id="prenom"></h3>
+                </div>
+            </div>
+
+            <div class="info">
+                <span>📧</span>
+                <div>
+                    <small>Email</small>
+                    <h3 id="email"></h3>
+                </div>
+            </div>
+
+            <div class="info">
+                <span>🎂</span>
+                <div>
+                    <small>Âge</small>
+                    <h3 id="age"></h3>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="retour()">
+            ← Modifier mes informations
+        </button>
+
+    </div>
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <script src="resultat.js"></script>
+
+</body>
+
+</html>
