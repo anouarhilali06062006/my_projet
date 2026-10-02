@@ -5,66 +5,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bienvenue</title>
+    <title>Mon Profil</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="result-page">
 
-    <div class="result-container">
+    <!-- Navbar -->
+    <nav class="navbar">
 
+        <div class="logo">
+            <span>◆</span> MySpace
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#">Profil</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Background decorations -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+
+
+    <!-- Main content -->
+    <main class="result-container">
+
+        <!-- Header -->
         <div class="welcome">
 
-            <span class="badge">✦ BIENVENUE</span>
+            <span class="badge">
+                ✦ INSCRIPTION RÉUSSIE
+            </span>
+
+            <div class="profile-icon">
+                👤
+            </div>
 
             <h1>
                 Bonjour <span id="nom"></span> 👋
             </h1>
 
             <p>
+                Bienvenue sur votre espace personnel.
                 Votre inscription a été effectuée avec succès.
-                Voici les informations que vous avez renseignées.
             </p>
 
         </div>
 
+
+        <!-- Status -->
+        <div class="status">
+            <span class="status-dot"></span>
+
+            <span>
+                Compte actif
+            </span>
+
+            <span id="date"></span>
+        </div>
+
+
+        <!-- Informations -->
+        <div class="section-title">
+            <h2>Vos informations</h2>
+
+            <p>
+                Voici les informations que vous avez renseignées.
+            </p>
+        </div>
+
+
         <div class="info-card">
 
+            <!-- Prénom -->
             <div class="info">
-                <span>👤</span>
-                <div>
-                    <small>Prénom</small>
+
+                <div class="icon purple">
+                    👤
+                </div>
+
+                <div class="info-content">
+
+                    <small>PRÉNOM</small>
+
                     <h3 id="prenom"></h3>
+
                 </div>
+
             </div>
 
+
+            <!-- Email -->
             <div class="info">
-                <span>📧</span>
-                <div>
-                    <small>Email</small>
+
+                <div class="icon blue">
+                    📧
+                </div>
+
+                <div class="info-content">
+
+                    <small>ADRESSE EMAIL</small>
+
                     <h3 id="email"></h3>
+
                 </div>
+
             </div>
 
+
+            <!-- Age -->
             <div class="info">
-                <span>🎂</span>
-                <div>
-                    <small>Âge</small>
-                    <h3 id="age"></h3>
+
+                <div class="icon orange">
+                    🎂
                 </div>
+
+                <div class="info-content">
+
+                    <small>ÂGE</small>
+
+                    <h3 id="age"></h3>
+
+                </div>
+
             </div>
 
         </div>
 
-        <button class="back-button" onclick="retour()">
-            ← Modifier mes informations
-        </button>
 
-    </div>
+        <!-- Message -->
+        <div class="message-box">
 
-    <div class="circle circle1"></div>
-    <div class="circle circle2"></div>
+            <div class="message-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>Tout est prêt !</h3>
+
+                <p>
+                    Vous pouvez maintenant profiter de votre espace
+                    personnel et découvrir toutes nos fonctionnalités.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button class="home-button" onclick="accueil()">
+                🏠 Accueil
+            </button>
+
+            <button class="back-button" onclick="retour()">
+                ✏️ Modifier mes informations
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 MySpace — Tous droits réservés
+        </p>
+
+    </footer>
+
 
     <script src="resultat.js"></script>
 
