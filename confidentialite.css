@@ -1,0 +1,348 @@
+:root {
+    color-scheme: dark;
+    --ink: #f3f6f4;
+    --muted: #9ba7a4;
+    --line: rgba(222, 240, 231, 0.12);
+    --panel: rgba(17, 28, 29, 0.82);
+    --mint: #8fe0bd;
+    --coral: #ff9b87;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    background-color: #10151b;
+    background-image:
+        linear-gradient(rgba(161, 211, 186, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(161, 211, 186, 0.035) 1px, transparent 1px),
+        linear-gradient(135deg, #10151b 10%, #142322 58%, #17201d);
+    background-size: 42px 42px, 42px 42px, auto;
+}
+
+a {
+    color: inherit;
+}
+
+.site-header {
+    min-height: 70px;
+    padding: 0 clamp(20px, 7vw, 100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(11, 17, 19, 0.72);
+}
+
+.logo {
+    color: var(--ink);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    margin-right: 8px;
+    color: var(--mint);
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.site-header nav a {
+    color: var(--muted);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    color: var(--mint);
+}
+
+.privacy-main {
+    width: min(760px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 76px 0 54px;
+}
+
+.page-intro {
+    margin-bottom: 34px;
+    animation: rise-in 500ms ease-out both;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: var(--mint);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.eyebrow span {
+    padding: 0 5px;
+    color: #657570;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(38px, 8vw, 58px);
+    line-height: 1.04;
+}
+
+h1 span {
+    color: var(--mint);
+}
+
+.intro-copy {
+    max-width: 540px;
+    margin: 18px 0 0;
+    color: #b5c0bc;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.data-panel {
+    padding: clamp(22px, 5vw, 36px);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    animation: rise-in 600ms 80ms ease-out both;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.panel-heading .eyebrow {
+    margin-bottom: 8px;
+    color: #9ba7a4;
+}
+
+h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.local-badge {
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    border: 1px solid rgba(143, 224, 189, 0.22);
+    border-radius: 4px;
+    color: var(--mint);
+    font-size: 11px;
+}
+
+.local-badge span {
+    margin-right: 5px;
+    font-size: 9px;
+}
+
+.data-list {
+    margin: 26px 0 0;
+}
+
+.data-row {
+    min-height: 59px;
+    display: grid;
+    grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.5fr);
+    align-items: center;
+    gap: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.data-row dt {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.data-row dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.feedback {
+    min-height: 21px;
+    margin: 16px 0 0;
+    color: var(--mint);
+    font-size: 13px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.button {
+    min-height: 44px;
+    padding: 0 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--mint);
+    outline-offset: 3px;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.button-export {
+    color: #101916;
+    background: var(--mint);
+}
+
+.button-export:hover:not(:disabled) {
+    background: #b0f0d1;
+}
+
+.button-export span {
+    margin-right: 7px;
+    font-size: 17px;
+}
+
+.button-delete {
+    border-color: rgba(255, 155, 135, 0.4);
+    color: var(--coral);
+    background: transparent;
+}
+
+.button-delete:hover:not(:disabled) {
+    background: rgba(255, 155, 135, 0.08);
+}
+
+.privacy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-top: 22px;
+    color: #b5c0bc;
+}
+
+.note-mark {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(143, 224, 189, 0.45);
+    border-radius: 50%;
+    color: var(--mint);
+    font-size: 13px;
+}
+
+.privacy-note p {
+    margin: 1px 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.privacy-note strong {
+    color: var(--ink);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 32px;
+    color: var(--mint);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 20px;
+    border-top: 1px solid var(--line);
+    color: #75817d;
+    font-size: 12px;
+    text-align: center;
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 560px) {
+    .site-header {
+        padding: 16px 20px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .site-header nav {
+        gap: 18px;
+    }
+
+    .privacy-main {
+        padding-top: 52px;
+    }
+
+    .panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .data-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 12px 0;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

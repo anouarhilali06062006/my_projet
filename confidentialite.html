@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10151b">
+    <title>Mes données | MySpace</title>
+    <link rel="stylesheet" href="confidentialite.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html"><span aria-hidden="true">◆</span> MySpace</a>
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="resultat.html">Profil</a>
+            <a href="confidentialite.html" aria-current="page">Mes données</a>
+        </nav>
+    </header>
+
+    <main class="privacy-main">
+        <section class="page-intro">
+            <p class="eyebrow">ESPACE PERSONNEL <span>/</span> CONFIDENTIALITÉ</p>
+            <h1>Vos données,<br><span>sous votre contrôle.</span></h1>
+            <p class="intro-copy">Consultez les informations enregistrées lors de votre inscription, téléchargez-en une copie ou supprimez-les de cet appareil.</p>
+        </section>
+
+        <section class="data-panel" aria-labelledby="data-title">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">STOCKAGE LOCAL</p>
+                    <h2 id="data-title">Informations de votre profil</h2>
+                </div>
+                <span class="local-badge"><span aria-hidden="true">●</span> Sur cet appareil</span>
+            </div>
+
+            <dl class="data-list">
+                <div class="data-row">
+                    <dt>Nom</dt>
+                    <dd id="data-nom">—</dd>
+                </div>
+                <div class="data-row">
+                    <dt>Prénom</dt>
+                    <dd id="data-prenom">—</dd>
+                </div>
+                <div class="data-row">
+                    <dt>Adresse e-mail</dt>
+                    <dd id="data-email">—</dd>
+                </div>
+                <div class="data-row">
+                    <dt>Âge</dt>
+                    <dd id="data-age">—</dd>
+                </div>
+            </dl>
+
+            <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+
+            <div class="actions">
+                <button class="button button-export" id="export-button" type="button">
+                    <span aria-hidden="true">↓</span> Télécharger mes données
+                </button>
+                <button class="button button-delete" id="delete-button" type="button">
+                    Supprimer mes données
+                </button>
+            </div>
+        </section>
+
+        <aside class="privacy-note">
+            <span class="note-mark" aria-hidden="true">i</span>
+            <p><strong>Vos informations restent dans votre navigateur.</strong> Ce site les conserve sur cet appareil et ne les envoie pas à un serveur.</p>
+        </aside>
+
+        <a class="back-link" href="resultat.html">← Retour à mon profil</a>
+    </main>
+
+    <footer>© 2026 MySpace</footer>
+    <script src="confidentialite.js"></script>
+</body>
+</html>
