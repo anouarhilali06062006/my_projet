@@ -12,9 +12,17 @@
 
 body {
 
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
     min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 24px;
 
     color: white;
 
@@ -34,6 +42,126 @@ body {
         #070711;
 
     overflow-x: hidden;
+}
+
+
+.form-container {
+
+    width: min(100%, 460px);
+
+    padding: 40px 30px;
+
+    background: rgba(17, 24, 39, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.5);
+}
+
+
+.form-container h1 {
+
+    font-size: clamp(2rem, 4vw, 2.7rem);
+
+    margin-bottom: 10px;
+
+    letter-spacing: -0.04em;
+}
+
+
+.form-container p {
+
+    color: #d1d5db;
+
+    font-size: 0.98rem;
+
+    line-height: 1.6;
+}
+
+
+#formulaire {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+    margin-top: 28px;
+}
+
+
+#formulaire input {
+
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    background: rgba(15, 23, 42, 0.5);
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+
+#formulaire input::placeholder {
+
+    color: #a5b4cf;
+}
+
+
+#formulaire input:focus {
+
+    outline: none;
+
+    border-color: rgba(147, 51, 234, 0.9);
+
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+}
+
+
+#formulaire button {
+
+    margin-top: 8px;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(90deg, #8b5cf6, #2563eb);
+
+    color: #fff;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+#formulaire button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 15px 30px rgba(96, 165, 250, 0.3);
 }
 
 
@@ -694,5 +822,29 @@ footer {
     .buttons button {
 
         width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    body {
+
+        padding: 18px;
+    }
+
+
+    .form-container {
+
+        padding: 28px 20px;
+
+        border-radius: 18px;
+    }
+
+
+    #formulaire input,
+    #formulaire button {
+
+        font-size: 0.96rem;
     }
 }
